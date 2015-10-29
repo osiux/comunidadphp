@@ -1,0 +1,24 @@
+{
+  "name": "comunidadphp",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Eduardo Reveles <me@osiux.ws>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "http://comunidaddephp.org",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "bootswatch": "~3.3.5+4",
+    "font-awesome": "~4.4.0"
+  }
+}
