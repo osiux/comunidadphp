@@ -32,7 +32,7 @@
 
     <hr>
     <footer>
-        <p>Aprender es como remar contra corriente, si no se hace se retrocede - &copy; Algunos derechos reservados - Código disponible en <a href="#"><i class="fa fa-github-alt"></i> Github</a>. ¡Ayúdanos a mejorarlo!</p>
+        <p>Aprender es como remar contra corriente, si no se hace se retrocede - &copy; Algunos derechos reservados - Código disponible en <a href="https://github.com/osiux/comunidadphp"><i class="fa fa-github-alt"></i> Github</a>. ¡Ayúdanos a mejorarlo!</p>
     </footer>
 </div>
 
