@@ -13,11 +13,6 @@ class AuthController extends Controller
     /**
      * @var string
      */
-    protected $loginPath = 'login';
-
-    /**
-     * @var string
-     */
     protected $redirectPath = '/';
 
     /**
