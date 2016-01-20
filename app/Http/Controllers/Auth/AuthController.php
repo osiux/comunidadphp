@@ -10,6 +10,8 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+
     /**
      * @var string
      */
@@ -20,8 +22,6 @@ class AuthController extends Controller
      */
     protected $redirectAfterLogout = '/';
 
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-
     /**
      * Create a new authentication controller instance.
      *
@@ -29,7 +29,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'getLogout']);
+        $this->middleware('guest', ['except' => 'logout']);
     }
 
     /**

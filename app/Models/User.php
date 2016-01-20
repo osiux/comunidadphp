@@ -38,16 +38,6 @@ class User extends Model implements AuthenticatableContract,
     protected $hidden = ['password', 'remember_token'];
 
     /**
-     * Hash user password
-     *
-     * @param string $value
-     */
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = Hash::make($value);
-    }
-
-    /**
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function country()

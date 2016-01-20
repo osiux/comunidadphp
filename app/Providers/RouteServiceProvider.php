@@ -24,9 +24,20 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(Router $router)
     {
-        //
-
         parent::boot($router);
+
+        $this->registerBindings();
+        $this->registerPatterns();
+    }
+
+    protected function registerBindings()
+    {
+        // $this->app->router->model();
+    }
+
+    protected function registerPatterns()
+    {
+        // $this->app->router->pattern();
     }
 
     /**
@@ -38,7 +49,9 @@ class RouteServiceProvider extends ServiceProvider
     public function map(Router $router)
     {
         $router->group(['namespace' => $this->namespace], function ($router) {
-            require app_path('Http/routes.php');
+            foreach (glob(app_path('Http//Routes').'/*.php') as $file) {
+                $this->app->make('App\\Http\\Routes\\'.basename($file, '.php'))->map($router);
+            }
         });
     }
 }
