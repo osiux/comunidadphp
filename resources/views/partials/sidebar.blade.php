@@ -9,17 +9,15 @@
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="#">Tu perfil</a></li>
                     <li>
-                        {!! Form::open(['route' => 'logout']) !!}
-                        <button type="submit" class="btn btn-link">Cerrar sesión</button>
-                        {!! Form::close() !!}
+                        <a href="{{ route('logout') }}">Cerrar sesión</a>
                     </li>
                 </ul>
             @else
                 {!! Form::open(['route' => 'login', 'role' => 'form',
                                     'class' => 'form']) !!}
                 <div class="form-group">
-                    {!! Form::text('username', null, ['class' => 'form-control',
-                                  'placeholder' => 'Usuario o correo']) !!}
+                    {!! Form::text('email', null, ['class' => 'form-control',
+                                  'placeholder' => 'Correo']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::password('password', ['class' => 'form-control',

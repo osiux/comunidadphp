@@ -5,8 +5,8 @@
 @section('content')
     {!! Form::open(['route' => 'login', 'role' => 'form']) !!}
     <div class="form-group">
-        {!! Form::label('username', 'Usuario o correo') !!}
-        {!! Form::text('username', null, ['class' => 'form-control']) !!}
+        {!! Form::label('email', 'Usuario o correo') !!}
+        {!! Form::text('email', null, ['class' => 'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('password', 'Contraseña') !!}
